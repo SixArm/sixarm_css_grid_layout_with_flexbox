@@ -1,0 +1,60 @@
+/**
+ * Grid Layout
+ *
+ * This code comes from the "Solved By Flexbox" repository:
+ * https://github.com/philipwalton/solved-by-flexbox/blob/master/demos/grids.md
+ *
+ * This code uses the naming conventions of SuitCSS:
+ *
+ *     .ComponentName
+ *     .ComponentName-partName
+ *
+ * We have edited this code with the goal of making it easier for beginners:
+ *
+ *   * Added comments, examples, and annotations
+ *   * Included the basic grid and grid cell, and omitted all other components.
+ *   * Included the basic media queries, and omitted all other media queries.
+ *
+ * If you know CSS well, and you want to optimize this file for speed,
+ * then you may want to adjust this file, and also use a CSS preprocessor.
+ */
+
+/**
+ * Component
+ *
+ * HTML example:
+ *
+ *     <div class="Grid">
+ *       <div class="Grid-cell">Alpha</div>
+ *       <div class="Grid-cell">Bravo</div>
+ *       <div class="Grid-cell">Charlie</div>
+ *     </div>
+ */
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Grid-cell {
+}
+
+/* Small screen */
+@media (max-width: 48em) {
+
+    /* On a small screen, show the grid cell as one row. */
+    .Grid-cell {
+        flex: 0 0 100%;
+    }
+
+}
+
+/* Large screen */
+@media (min-width: 48em) {
+
+    /* On a large screen, show the grid cell as one column. */
+    .Grid-cell {
+        flex: 1;
+    }
+
+}
